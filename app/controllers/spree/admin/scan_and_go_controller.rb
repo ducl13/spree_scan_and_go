@@ -1,7 +1,8 @@
 module Spree
   module Admin
-    class ScanAndGoController < Spree::Admin::BaseController
-
+    class ScanAndGoController < Spree::BaseController
+      layout 'spree/layouts/admin'
+      
       RULES = {
         /^RMA/ => :return_authorization,
         /^R/ => :order,
